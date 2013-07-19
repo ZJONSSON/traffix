@@ -36,8 +36,8 @@ function scrape() {
         bus.TIME = new Date(bus.TIMESTAMPREAL);
         var key = bus.BUSNR+"#"+bus.FROMSTOP+"#"+bus.TOSTOP;
         record[key] = record[key]  || [];
+        var lastDist = 1;
         if (last && last[key]) last[key].forEach(function(d) {
-          var lastDist = 1;
           var distance = geo.distance(bus.pos,d.pos);
           if (distance < lastDist) {
             bus.id = d.id;
