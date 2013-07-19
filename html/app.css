@@ -1,0 +1,31 @@
+ html, body, #map {
+ 	height: 100%;
+ 	width:100%;
+ 	padding:0px;
+ 	margin:0px;
+ }
+
+.label { 
+ 	fill:white;
+ 	text-anchor:middle;
+ 	font-size:16;
+ 	font-family:  serif
+ }
+
+ #arrow { fill:black; }
+ 
+ #arrow_white { fill:white;}
+
+.whiteline {
+	stroke:white;
+	fill:white;
+	marker-end:url(#arrow_white);
+	stroke-width:4;
+}
+
+.blackline {
+	stroke:black;
+	fill:white;
+	marker-end:url(#arrow);
+	stroke-width:3;
+}
