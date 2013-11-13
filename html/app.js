@@ -1,4 +1,4 @@
-var tileUrl = 'https://{s}.tiles.mapbox.com/v3/cartodb.map-1nh578vv/{z}/{x}/{y}.png',
+var tileUrl = 'https://{s}.tiles.mapbox.com/v3/zjonsson.map-6qn6dl9t/{z}/{x}/{y}.png',
     map = L.map('map').setView([64.138, -21.90], 14),
     layer = new L.TileLayer(tileUrl).addTo(map),
     busses = [];
