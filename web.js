@@ -11,6 +11,9 @@ var request = require("request"),
     counter = 0,
     last= {busses:[]};
 
+if (process.env.PROXY)
+  request = request.defaults({'proxy' : process.env.PROXY});
+
 var emit;
 
 
@@ -83,6 +86,10 @@ function scrape() {
 
 io.sockets.on("connection", function(socket) {
   socket.emit('update',emit);
+});
+
+setInterval(function() {
+  if (new Date() - last_updated > 60000) scrape();
 });
 
 scrape();
